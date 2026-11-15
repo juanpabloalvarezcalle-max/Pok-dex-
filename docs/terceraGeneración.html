@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Región de Hoenn</title>
+    <link rel="stylesheet" href="/style/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="sticky-nav">
+      <div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary navBarText">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">Pokédex</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="/index.html"
+                    >Inicio</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/docs/primeraGeneracion.html"
+                    >Primera Generación</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/docs/terceraGeneración.html"
+                    >Tercera Generación</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/docs/sextaGeneración.html"
+                    >Sexta Generación</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="colorVerdeHeader">
+        <h1>Tercera Generación</h1>
+      </div>
+    </header>
+    <main>
+      <div class="seccion-buscador w-75 mb-3 rounded-5 mx-auto">
+        <h2 class="titulo-buscador">Busca a tu Pokémon favorito</h2>
+        <div class="buscador">
+          <input
+            type="text"
+            id="input"
+            placeholder="Nombre o número..."
+            autocomplete="off"
+          />
+          <button id="btn" aria-label="Buscar Pokémon">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="
+                width: 16px;
+                height: 16px;
+                min-width: 16px;
+                max-width: 16px;
+                flex-shrink: 0;
+                display: inline-block;
+              "
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span>Buscar</span>
+          </button>
+        </div>
+
+        <p id="mensaje">Buscar a tu pokemon favorito</p>
+
+        <div class="card pokemon-resultado" id="card">
+          <div class="pokemon-img-wrapper">
+            <img id="imagen" alt="Imagen Pokemon" />
+          </div>
+          <p class="nombre" id="nombre"></p>
+          <span class="tipo" id="tipo">...</span>
+        </div>
+      </div>
+
+      <div class="container text-center">
+        <div class="row" id="contenedorPokemones"></div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="/scripts/scripts.js"></script>
+    <script src="/scripts/buscador.js"></script>
+    <script>
+      ListarPokemones(2);
+    </script>
+  </body>
+</html>
